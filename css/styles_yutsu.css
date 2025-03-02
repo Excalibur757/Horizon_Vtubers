@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1E3A8A; /* Azul escuro predominante */
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0F172A; /* Preto para contraste */
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    color: #60A5FA; /* Azul claro para destaque */
+}
+
+h2 {
+    color: #93C5FD; /* Azul intermediário */
+    border-bottom: 2px solid #60A5FA;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+section {
+    background-color: #172554; /* Azul mais escuro para caixas */
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+    margin-top: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #2563EB; /* Azul vibrante para destaque */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 60%;
+    text-align: center;
+}
+
+footer {
+    background-color: #0F172A;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}

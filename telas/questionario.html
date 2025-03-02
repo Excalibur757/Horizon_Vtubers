@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontre VTubers</title>
+    <link rel="stylesheet" href="../css/styles2.css">
+</head>
+<body>
+    <header>
+        <img src="../assets/horizonvtubers.png" alt="Logo Horizon Vtubers" class="logo">
+        <h1>Encontre a VTuber ideal para você!</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="vtubers.html">VTubers</a></li>
+                <li><a href="yutsu.html">Criador</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Responda o questionário abaixo que farei o possível pra indicar a melhor</h2>
+        <form id="questionario">
+            <label>Qual o seu gênero de conteúdo favorito?</label>
+            <select id="genero">
+                <option value="gameplay">Gameplay</option>
+                <option value="just-chatting">Just Chatting</option>
+                <option value="música">Música</option>
+                <option value="reaction">React</option>
+                <option value="arte">Arte</option>
+            </select>
+
+            <label>Qual o melhor horário para assistir lives?</label>
+            <select id="horario">
+                <option value="manha">Manhã</option>
+                <option value="tarde">Tarde</option>
+                <option value="noite">Noite</option>
+                <option value="madrugada">Madrugada</option>
+            </select>
+
+            <label>Você prefere VTubers com quantos espectadores?</label>
+            <select id="tamanho">
+                <option value="muito grande">Mais de 100</option>
+                <option value="grande">Entre 51 a 100</option>
+                <option value="médio">Entre 21 a 50</option>
+                <option value="pequeno">Entre 11 a 20</option>
+                <option value="muito pequeno">Entre 2 a 10 </option>
+            </select>
+
+            <label>Frequência de lives que você prefere?</label>
+            <select id="frequencia">
+                <option value="todo dia">Todo dia</option>
+                <option value="semana">Na Semana</option>
+                <option value="fimdesemana">Finais de Semana</option>
+                <option value="aleatorios">Dias Aleatórios</option>
+                <option value="intercalado">Intercalado (dia sim e dia não)</option>
+            </select>
+
+            <label>Plataforma favorita?</label>
+            <select id="plataforma">
+                <option value="twitch">Twitch</option>
+                <option value="youtube">YouTube</option>
+                <option value="tiktok">TikTok</option>
+                <!--<option value="tantofaz">Tanto Faz</option>-->
+            </select>
+
+            <button type="button" onclick="processarRespostas()">Encontrar VTuber</button>
+        </form>
+    </div>
+
+    <script>
+        function processarRespostas() {
+            const respostas = {
+                genero: document.getElementById("genero").value,
+                horario: document.getElementById("horario").value,
+                tamanho: document.getElementById("tamanho").value,
+                frequencia: document.getElementById("frequencia").value,
+                plataforma: document.getElementById("plataforma").value,
+            };
+
+            // Armazena as respostas no localStorage para a próxima página
+            localStorage.setItem("respostas", JSON.stringify(respostas));
+
+            // Redireciona para a página de resultados
+            window.location.href = "resultados.html";
+        }
+    </script>
+        <footer>
+            <p>&copy; 2025 Divulgação de VTubers. Todos os direitos reservados.</p>
+        </footer>
+</body>
+</html>

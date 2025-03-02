@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0e6ff;
+    color: #4a4a4a;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #9b59b6;
+    padding: 20px;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    color: #d5ccda;
+}
+
+h2 {
+    color: #9b59b6;
+    border-bottom: 2px solid #8e44ad;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+section {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: cursive;
+
+}
+
+.sobre .content {
+    display: flex;
+    align-items: center; /* Centraliza o texto verticalmente */
+    justify-content: center; /* Garante um bom espaçamento */
+    gap: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.sobre img {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0; /* Removido para evitar espaçamentos indesejados */
+}
+
+.sobre p {
+    flex: 1; /* Faz o texto ocupar o espaço restante */
+    text-align: left; /* Alinha o texto à esquerda */
+    max-width: 500px; /* Limita a largura do texto */
+    padding-left: 50px;
+    font-family: cursive;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #d2b4de;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 60%;
+    text-align: center;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 15px;
+    width: 81%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.frame h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #f21d88;
+}
+
+.twitter-tweet {
+    width: 100% !important;
+    max-width: 560px;
+    margin: 10px 0;
+}
+
+.twitter-tweet a {
+    color: #1da1f2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.twitter-tweet a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #9b59b6;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    width: 100%;
+}

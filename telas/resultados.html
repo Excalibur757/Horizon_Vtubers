@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTubers Recomendadas</title>
+    <link rel="stylesheet" href="../css/styles3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="vtubers.html">Mais Vtubers</a></li>
+                <li><a href="yutsu.html">Criador</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>VTubers recomendadas para você</h2>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        const vtubers = [
+            { 
+                nome: "Belaryn", 
+                generos: ["Arte", "just-chatting"], 
+                horario: "tarde", 
+                tamanho: "muito pequeno", 
+                frequencia: "semana", 
+                plataforma: "twitch", 
+                imagem: "../assets/belaryn.png",
+                link: "../vtubers/belaryn.html"
+            },
+            { 
+                nome: "Lulu Uchū", 
+                generos: ["Gameplay", "just-chatting"], 
+                horario: ["tarde", "noite"], 
+                tamanho: "médio", 
+                frequencia: "intercalado", 
+                plataforma: ["twitch", "youtube"], 
+                imagem: "../assets/lulu.png",
+                link: "../vtubers/lulu.html"
+            },
+            { 
+                nome: "Sayuri Yurei", 
+                generos: ["reaction", "arte"], 
+                horario: "noite", 
+                tamanho: "médio", 
+                frequencia: "semana", 
+                plataforma: "youtube", 
+                imagem: "../assets/Sayuri.png",
+                link: "../vtubers/sayuri.html"
+            },
+            { 
+                nome: "Mayazinha", 
+                generos: ["gameplay", "just-chatting"], 
+                horario: "noite", 
+                tamanho: "médio", 
+                frequencia: "todo dia", 
+                plataforma: "youtube", 
+                imagem: "../assets/mayazinha.png",
+                link: "../vtubers/mayazinha.html"
+            },
+
+            { 
+                nome: "Niikkio", 
+                generos: ["gameplay", "just-chatting"], 
+                horario: "noite", 
+                tamanho: "pequeno", 
+                frequencia: "todo dia", 
+                plataforma: "youtube", 
+                imagem: "../assets/Niikkio.png",
+                link: "../vtubers/niikkio.html"
+            },
+
+            { 
+                nome: "Mary Von Blanc", 
+                generos: ["gameplay", "just-chatting"], 
+                horario: "noite", 
+                tamanho: "pequeno", 
+                frequencia: "semana", 
+                plataforma: "youtube", 
+                imagem: "../assets/Mary.png",
+                link: "../vtubers/Mary.html"
+            },
+        ];
+
+        // Carrega as respostas do usuário
+        const respostas = JSON.parse(localStorage.getItem("respostas"));
+        
+        if (!respostas) {
+            document.getElementById("resultado").innerHTML = "<p>Erro ao carregar preferências. Tente novamente.</p>";
+        } else {
+            const { genero, horario, tamanho, frequencia, plataforma } = respostas;
+        
+            // Função para calcular pontuação de compatibilidade
+            function calcularPontuacao(vtuber) {
+                let pontuacao = 0;
+
+                if (vtuber.generos.includes(genero)) {
+                    pontuacao += vtuber.generos[0] === genero ? 3 : 2;
+                }
+
+                if (vtuber.horario === horario) pontuacao += 3;
+                if (vtuber.tamanho === tamanho) pontuacao += 3;
+                if (vtuber.frequencia === frequencia) pontuacao += 2;
+                if (vtuber.plataforma === plataforma) pontuacao += 2;
+
+                const horariosSemelhantes = {
+                    "manha": ["tarde"],
+                    "tarde": ["manha", "noite"],
+                    "noite": ["tarde", "madrugada"],
+                    "madrugada": ["noite"]
+                };
+                if (horariosSemelhantes[horario]?.includes(vtuber.horario)) pontuacao += 2;
+
+                return pontuacao;
+            }
+        
+            // Ordena os VTubers pela pontuação
+            const recomendadas = vtubers.map(vtuber => ({
+                ...vtuber,
+                pontuacao: calcularPontuacao(vtuber)
+            })).sort((a, b) => b.pontuacao - a.pontuacao);
+        
+            // Exibe os resultados na tela
+            const resultadoDiv = document.getElementById("resultado");
+        
+            if (recomendadas[0].pontuacao > 0) {
+                recomendadas.forEach(vtuber => {
+                    resultadoDiv.innerHTML += `
+                        <a href="${vtuber.link}" class="vtuber-link">
+                            <div class="vtuber-card">
+                                <img src="${vtuber.imagem}" alt="${vtuber.nome}">
+                                <h3>${vtuber.nome}</h3>
+                                <p>Categoria: ${vtuber.generos.join(", ")}</p>
+                                <p>Horário de Live: ${vtuber.horario}</p>
+                                <p>Tamanho do público: ${vtuber.tamanho}</p>
+                                <p>Dias de live: ${vtuber.frequencia}</p>
+                                <p>Plataforma: ${vtuber.plataforma}</p>
+                                <p>‎‎‎‎‎‎‎‎ㅤ</p>
+                                <p><strong>Pontuação de compatibilidade: ${vtuber.pontuacao}</strong></p>
+                            </div>
+                        </a>
+                    `;
+                });
+            } else {
+                resultadoDiv.innerHTML = "<p>Não encontramos VTubers compatíveis com suas preferências exatas. Tente ajustar algumas escolhas!</p>";
+            }
+        }
+    </script>
+    <footer>
+        <p>&copy; 2025 Divulgação de VTubers. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

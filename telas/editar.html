@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de Alteração</title>
+    <link rel="stylesheet" href="../css/styles4.css">
+</head>
+<body>
+    <header>
+        <h1>Solicitação de Alteração de Dados</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="vtubers.html">VTubers</a></li>
+                <li><a href="yutsu.html">Criador</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="form-container">
+            <h2>Preencha as informações abaixo para solicitar uma alteração:</h2>
+
+            <form action="submit_alteracao.php" method="post">
+                <label for="nome-vtuber">Nome da VTuber:</label>
+                <input type="text" id="nome-vtuber" name="nome-vtuber" required>
+
+                <label for="tipo-alteracao">O que precisa ser alterado?</label>
+                <select id="tipo-alteracao" name="tipo-alteracao" required>
+                    <option value="lore">Lore</option>
+                    <option value="plataforma">Plataforma de stream</option>
+                    <option value="horarios">Horários de live</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <label for="descricao">Descreva o erro e a informação correta:</label>
+                <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+                <label for="contato">Seu contato (opcional, para dúvidas):</label>
+                <input type="text" id="contato" name="contato" placeholder="disc, email, X, etc">
+
+                <button type="submit" class="btn">Enviar Solicitação</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Divulgação de VTubers. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

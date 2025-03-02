@@ -1,0 +1,132 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    margin: auto;
+}
+
+/* Cabeçalho */
+/* Cabeçalho */
+header {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    padding: 20px 20px; /* Reduzi o padding para evitar excesso de espaço */
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box; /* Garante que o padding não cause overflow */
+    overflow: hidden; /* Impede a barra de rolagem */
+}
+
+/* Logo */
+header .logo {
+    max-height: 75px; /* Ajustei o tamanho da logo para evitar que ela ocupe muito espaço */
+    margin-right: 15px; /* Menor margem entre a logo e o título */
+}
+
+/* Título do cabeçalho */
+header h1 {
+    font-size: 40px; /* Diminuí o tamanho da fonte para o título */
+    font-weight: 600;
+    color: white;
+    margin: 0;
+}
+
+/* Menu de navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+h1 {
+    color: #60A5FA; /* Azul claro para destaque */
+}
+
+h2 {
+    color: #93C5FD; /* Azul intermediário */
+    border-bottom: 2px solid #60A5FA;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+select, button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+button {
+    background: #ffcc00;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #ffdd44;
+}
+
+/* Estilização dos cards de VTubers */
+.vtuber-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+}
+
+.vtuber-card img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}

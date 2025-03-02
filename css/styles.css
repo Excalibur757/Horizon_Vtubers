@@ -1,0 +1,160 @@
+/* Importando fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffe6f2;
+    color: #333;
+    text-align: center;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ff3385;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Logo */
+header .logo {
+    max-height: 100px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-right: 20px; /* Espaço entre a logo e o título */
+}
+
+/* Título do cabeçalho */
+header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+}
+
+/* Menu de navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
+}
+
+
+/* Seções gerais */
+section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 24px;
+    color: #ff3385;
+    margin-bottom: 15px;
+}
+
+/* Área de novos VTubers */
+.novos-vtubers {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Faz com que os elementos "grudem" na borda inferior */
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden; /* Para evitar que elementos ultrapassem os limites */
+}
+
+.novos-vtubers h2 {
+    padding: 50PX;
+}
+
+.novos-vtubers .vtuber-lista {
+    display: flex;
+    gap: 10px; /* Reduzi o espaço entre os cards */
+    margin-top: 0;
+}
+
+.novos-vtubers .vtuber-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 180px; /* Ajuste conforme necessário */
+    height: 250px; /* Defina uma altura fixa para que todos fiquem iguais */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Faz a imagem e conteúdo ficarem no fim do card */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.novos-vtubers .vtuber-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.novos-vtubers img {
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Botões chamativos */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 18px;
+    background: linear-gradient(90deg, #ff3385, #ff66a3);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #ff66a3, #ff3385);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Footer */
+footer {
+    background-color: #ff3385;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+    width: 100%;
+    font-size: 16px;
+}
