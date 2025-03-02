@@ -11,7 +11,7 @@
         <h1>Solicitação de Alteração de Dados</h1>
         <nav>
             <ul>
-                <li><a href="../index.html">Início</a></li>
+                <li><a href="../">Início</a></li>
                 <li><a href="vtubers.html">VTubers</a></li>
                 <li><a href="yutsu.html">Criador</a></li>
             </ul>
@@ -22,7 +22,8 @@
         <section class="form-container">
             <h2>Preencha as informações abaixo para solicitar uma alteração:</h2>
 
-            <form action="submit_alteracao.php" method="post">
+            <form class="submit_alteracao">
+                <p id="status-msg" style="display:none;"></p>
                 <label for="nome-vtuber">Nome da VTuber:</label>
                 <input type="text" id="nome-vtuber" name="nome-vtuber" required>
 
@@ -37,16 +38,22 @@
                 <label for="descricao">Descreva o erro e a informação correta:</label>
                 <textarea id="descricao" name="descricao" rows="4" required></textarea>
 
-                <label for="contato">Seu contato (opcional, para dúvidas):</label>
+                <label for="contato">Seu contato (opcional, para dúvidas ou melhorias):</label>
                 <input type="text" id="contato" name="contato" placeholder="disc, email, X, etc">
 
                 <button type="submit" class="btn">Enviar Solicitação</button>
             </form>
         </section>
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="../script.js"></script> 
     <footer>
         <p>&copy; 2025 Divulgação de VTubers. Todos os direitos reservados.</p>
     </footer>
+    <script>
+        window.EMAILJS_PUBLIC_KEY = "756kzVslIZxmNVGQK";
+        window.EMAILJS_SERVICE_ID = "service_iacnfhk";
+        window.EMAILJS_TEMPLATE_ID = "template_x17a8ig";
+    </script> 
 </body>
 </html>
