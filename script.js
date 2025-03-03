@@ -1,135 +1,101 @@
 document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init(window.EMAILJS_PUBLIC_KEY); // Usando a chave pública definida no HTML
-
     const formIndicacao = document.querySelector(".submit_indicacao");
     const formRemocao = document.querySelector(".submit_remocao");
     const formAlteracao = document.querySelector(".submit_alteracao");
+    const API_URL = "https://seu-backend.vercel.app/send-email"; // 🔹 Substitua pelo seu link real do Vercel
+
+    async function enviarFormulario(form, dados, mensagemSucesso, mensagemErro) {
+        const statusMsg = document.getElementById("status-msg");
+
+        try {
+            const response = await fetch(API_URL, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(dados),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                statusMsg.textContent = mensagemSucesso;
+                statusMsg.style.color = "green";
+                form.reset();
+            } else {
+                throw new Error(result.message);
+            }
+        } catch (error) {
+            statusMsg.textContent = mensagemErro;
+            statusMsg.style.color = "red";
+            console.error("Erro:", error);
+        }
+
+        statusMsg.style.display = "block";
+    }
 
     if (formIndicacao) {
         formIndicacao.addEventListener("submit", function (event) {
             event.preventDefault();
 
-            console.log("EmailJS carregado?", emailjs);
-
-            // Captura os valores do formulário
-            const nome = document.getElementById("nome-vtuber").value;
-            const conteudo = document.getElementById("conteudos").value;
-            const espectadores = document.getElementById("media-espectadores").value;
-            const periodo = document.getElementById("periodo-lives").value;
-            const frequencia = document.getElementById("frequencia-lives").value;
-            const plataforma = document.getElementById("plataformas").value;        
-            const statusMsg = document.getElementById("status-msg");
-            const objetivo = "VTUBER ENCONTRADO!";
-            const fazer = "Adicione ao site ->";
-
-            const templateParams = {
-                objetivo: objetivo,
-                fazer: fazer,
-                from_name: nome,
-                conteudo: "Conteúdo de suas lives: " + conteudo,
-                espectadores: "Média de Espectadores: " + espectadores,
-                periodo: "Período das Lives: " + periodo,
-                frequencia: "Frequência das Lives: " + frequencia,
-                plataforma: "Plataforma Preferida: " + plataforma
+            const dados = {
+                nome: document.getElementById("nome-vtuber").value,
+                conteudo: document.getElementById("conteudos").value,
+                espectadores: document.getElementById("media-espectadores").value,
+                periodo: document.getElementById("periodo-lives").value,
+                frequencia: document.getElementById("frequencia-lives").value,
+                plataforma: document.getElementById("plataformas").value,
+                objetivo: "VTUBER ENCONTRADO!",
+                fazer: "Adicione ao site ->",
             };
 
-            console.log("Enviando com os seguintes parâmetros:", templateParams);
-
-            emailjs.send(window.EMAILJS_SERVICE_ID, window.EMAILJS_TEMPLATE_ID, templateParams)
-                .then(response => {
-                    statusMsg.textContent = "Mensagem enviada com sucesso!";
-                    statusMsg.style.color = "green";
-                    statusMsg.style.display = "block";
-                    formIndicacao.reset();
-                })
-                .catch(error => {
-                    statusMsg.textContent = "Erro ao enviar mensagem. Tente novamente.";
-                    statusMsg.style.color = "red";
-                    statusMsg.style.display = "block";
-                    console.error("Erro:", error);
-                });
+            enviarFormulario(
+                formIndicacao,
+                dados,
+                "Mensagem enviada com sucesso!",
+                "Erro ao enviar mensagem. Tente novamente."
+            );
         });
     }
 
     if (formRemocao) {
         formRemocao.addEventListener("submit", function (event) {
             event.preventDefault();
-    
-            console.log("EmailJS carregado?", emailjs);
-    
-            // Captura os valores do formulário
-            const nome = document.getElementById("nome-vtuber").value;
-            const contato = document.getElementById("contato").value;
-            const email = document.getElementById("email").value;
-            const objetivo = "REMOÇÃO DE VTUBER";
-            const fazer = "Remova Vtuber -> ";
-            const statusMsg = document.getElementById("status-msg");
-    
-            const templateParams = {
-                objetivo: objetivo,
-                fazer: fazer,
-                from_name: nome,
-                contato: "Meio de contato escolhido: " + contato,
-                email: "Email escolhido: " + email,
+
+            const dados = {
+                nome: document.getElementById("nome-vtuber").value,
+                contato: document.getElementById("contato").value,
+                email: document.getElementById("email").value,
+                objetivo: "REMOÇÃO DE VTUBER",
+                fazer: "Remova Vtuber ->",
             };
-    
-            console.log("Enviando com os seguintes parâmetros:", templateParams);
-    
-            emailjs.send(window.EMAILJS_SERVICE_ID, window.EMAILJS_TEMPLATE_ID, templateParams)
-                .then(response => {
-                    statusMsg.textContent = "Mensagem enviada! Até 3 dias para responder você!";
-                    statusMsg.style.color = "green";
-                    statusMsg.style.display = "block";
-                    formRemocao.reset();
-                })
-                .catch(error => {
-                    statusMsg.textContent = "Erro ao enviar mensagem. Tente novamente.";
-                    statusMsg.style.color = "red";
-                    statusMsg.style.display = "block";
-                    console.error("Erro:", error);
-                });
+
+            enviarFormulario(
+                formRemocao,
+                dados,
+                "Mensagem enviada! Até 3 dias para responder você!",
+                "Erro ao enviar mensagem. Tente novamente."
+            );
         });
     }
 
     if (formAlteracao) {
         formAlteracao.addEventListener("submit", function (event) {
             event.preventDefault();
-    
-            console.log("EmailJS carregado?", emailjs);
-    
-            // Captura os valores do formulário
-            const nome = document.getElementById("nome-vtuber").value;
-            const contato = document.getElementById("contato").value;
-            const alteracao = document.getElementById("tipo-alteracao").value;
-            const descricao = document.getElementById("descricao").value;
-            const objetivo = "ALTERAÇÃO DE VTUBER";
-            const fazer = "Altere Vtuber -> ";
-            const statusMsg = document.getElementById("status-msg");
-    
-            const templateParams = {
-                objetivo: objetivo,
-                fazer: fazer,
-                from_name: nome,
-                alteracao: "Alteração escolhida: " + alteracao,
-                descricao: "Descrição do problema: " + descricao,
-                contato: "Contato para tirar dúvidas: " + contato,
+
+            const dados = {
+                nome: document.getElementById("nome-vtuber").value,
+                contato: document.getElementById("contato").value,
+                alteracao: document.getElementById("tipo-alteracao").value,
+                descricao: document.getElementById("descricao").value,
+                objetivo: "ALTERAÇÃO DE VTUBER",
+                fazer: "Altere Vtuber ->",
             };
-    
-            console.log("Enviando com os seguintes parâmetros:", templateParams);
-    
-            emailjs.send(window.EMAILJS_SERVICE_ID, window.EMAILJS_TEMPLATE_ID, templateParams)
-                .then(response => {
-                    statusMsg.textContent = "Mensagem enviada! Até 5 dias para atualizar a página!";
-                    statusMsg.style.color = "green";
-                    statusMsg.style.display = "block";
-                    formAlteracao.reset();
-                })
-                .catch(error => {
-                    statusMsg.textContent = "Erro ao enviar mensagem. Tente novamente.";
-                    statusMsg.style.color = "red";
-                    statusMsg.style.display = "block";
-                    console.error("Erro:", error);
-                });
+
+            enviarFormulario(
+                formAlteracao,
+                dados,
+                "Mensagem enviada! Até 5 dias para atualizar a página!",
+                "Erro ao enviar mensagem. Tente novamente."
+            );
         });
     }
 });
