@@ -1,13 +1,24 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const fetch = require("node-fetch");
 
 const app = express();
-const PORT = process.env.PORT || 3001;
-
-app.use(cors());
 app.use(express.json());
+app.use(cors());
+
+// Testando a API
+app.get("/", (req, res) => {
+    res.json({ message: "API funcionando!" });
+});
+
+// Configuração para rodar no Vercel
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+});
+
+module.exports = app;
+
 
 app.post("/send-email", async (req, res) => {
     try {
