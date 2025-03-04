@@ -115,3 +115,82 @@ footer {
     padding: 15px;
     margin-top: 20px;
 }
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .sobre .content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .sobre img {
+        width: 250px;
+        margin-left: 0;
+    }
+
+    .sobre p {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .sobre, .conteudo, .horarios, .redes, .frame {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .sobre p {
+        font-size: 24px;
+    }
+
+    .horarios p {
+        font-size: 24px;
+    }
+
+    .twitter-tweet {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .sobre img {
+        width: 200px;
+    }
+
+    .sobre p, .horarios p {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    ul li {
+        font-size: 16px;
+    }
+
+    .frame h2 {
+        font-size: 2em;
+    }
+}
