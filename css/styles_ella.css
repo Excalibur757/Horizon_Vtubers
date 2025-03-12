@@ -1,0 +1,164 @@
+/* Estilo exclusivo para a página da VTuber Ella Higurashi */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fce5d8; /* Tom pêssego suave */
+    color: #5a3b2c; /* Marrom escuro para contraste */
+    text-align: center;
+}
+
+header {
+    background-color: #d97a5d; /* Laranja queimado */
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffae92; /* Tom mais claro para destaque */
+}
+
+main {
+    padding: 50px 10%;
+}
+
+h1 {
+    color: #c14e33; /* Vermelho terroso */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #9e3d28; /* Marrom avermelhado */
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.introducao .ella-image  {
+    width: 260px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #d97a5d; /* Contorno laranja queimado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+img {
+    width: 35%;
+    margin-bottom: 20px;
+}
+
+section {
+    background: linear-gradient(135deg, #ffe1cc, #ffc2a1);
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+ul.conteudo-lista {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul.conteudo-lista li {
+    background-color: #ffae92;
+    color: #5a3b2c;
+    margin: 8px 0;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 80%;
+    text-align: center;
+}
+
+.frame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #d97a5d;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        padding: 30px 5%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .introducao .ella-image img {
+        width: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    ul.conteudo-lista li {
+        font-size: 14px;
+    }
+
+    .introducao .ella-image {
+        width: 180px;
+    }
+
+    img {
+        width: 100%;
+    }
+}

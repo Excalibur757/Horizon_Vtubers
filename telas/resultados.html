@@ -12,12 +12,14 @@
             <ul>
                 <li><a href="../">Início</a></li>
                 <li><a href="vtubers.html">Mais Vtubers</a></li>
+                <li><a href="questionario.html">Faça o teste novamente</a></li>
                 <li><a href="yutsu.html">Criador</a></li>
             </ul>
         </nav>
     </header>
     <div class="container">
         <h2>VTubers recomendadas para você</h2>
+        <h4>A ordem não significa que seja a mais indicada ou a menos indicada, cabe a você visitar os canais e descobrir</h4>
         <div id="resultado"></div>
     </div>
 
@@ -25,7 +27,7 @@
         const vtubers = [
             { 
                 nome: "Belaryn", 
-                generos: ["Arte", "just-chatting", "gameplay"], 
+                generos: ["gameplay", "arte", "just-chatting"], 
                 horario: "tarde", 
                 tamanho: "muito pequeno", 
                 frequencia: "semana", 
@@ -35,10 +37,10 @@
             },
             { 
                 nome: "Lulu Uchū", 
-                generos: ["Gameplay", "just-chatting"], 
+                generos: ["just-chatting","gameplay"],
                 horario: ["tarde", "noite"], 
                 tamanho: "médio", 
-                frequencia: "intercalado", 
+                frequencia: "dias alternados", 
                 plataforma: ["twitch", "youtube"], 
                 imagem: "../assets/Lulu.png",
                 link: "../vtubers/lulu.html"
@@ -47,8 +49,8 @@
                 nome: "Sayuri Yurei", 
                 generos: ["gameplay", "just-chatting", "arte"], 
                 horario: "noite", 
-                tamanho: "médio", 
-                frequencia: "semana", 
+                tamanho: "pequeno", 
+                frequencia: "dias alternados", 
                 plataforma: "youtube", 
                 imagem: "../assets/Sayuri.png",
                 link: "../vtubers/sayuri.html"
@@ -58,107 +60,249 @@
                 generos: ["gameplay", "just-chatting"], 
                 horario: "noite", 
                 tamanho: "médio", 
-                frequencia: "todo dia", 
+                frequencia: "semana", 
                 plataforma: "youtube", 
                 imagem: "../assets/mayazinha.png",
                 link: "../vtubers/mayazinha.html"
             },
-
             { 
                 nome: "Niikkio", 
                 generos: ["gameplay", "just-chatting"], 
                 horario: "noite", 
                 tamanho: "pequeno", 
-                frequencia: "todo dia", 
+                frequencia: "semana", 
                 plataforma: "youtube", 
                 imagem: "../assets/Niikkio.png",
                 link: "../vtubers/niikkio.html"
             },
-
             { 
                 nome: "Mary Von Blanc", 
                 generos: ["gameplay", "just-chatting"], 
                 horario: "noite", 
                 tamanho: "pequeno", 
                 frequencia: "semana", 
-                plataforma: "youtube", 
+                plataforma: ["twitch", "youtube"], 
                 imagem: "../assets/Mary.png",
                 link: "../vtubers/Mary.html"
             },
-
             { 
                 nome: "Nyra", 
                 generos: ["gameplay", "just-chatting", "react"], 
                 horario: "noite", 
-                tamanho: "pequeno", 
+                tamanho: "muito pequeno", 
                 frequencia: "semana", 
                 plataforma: ["youtube", "twitch"], 
                 imagem: "../assets/nyra.png",
                 link: "../vtubers/nyra.html"
             },
+            { 
+                nome: "Carolita", 
+                generos: ["just-chatting", "Cooking Stream", "ASMR", "Karaokê"], 
+                horario: "noite", 
+                tamanho: "médio", 
+                frequencia: "dias alternados", 
+                plataforma: ["youtube", "twitch"], 
+                imagem: "../assets/carolita.png",
+                link: "../vtubers/carolita.html"
+            },
+            { 
+                nome: "Aizen Nozomi", 
+                generos: ["gameplay", "just-chatting"], 
+                horario: "manhã", 
+                tamanho: "muito pequeno", 
+                frequencia: "semana", 
+                plataforma: ["youtube"], 
+                imagem: "../assets/Aizen.png",
+                link: "../vtubers/AizenNozomi.html"
+            },
+            {
+                nome: "Sagirimono", 
+                generos: ["gameplay", "just-chatting", "arte"], 
+                horario: "madrugada", 
+                tamanho: "médio", 
+                frequencia: "dias aleatórios", 
+                plataforma: ["twitch"], 
+                imagem: "../assets/sagirimono.png",
+                link: "../vtubers/sagirimono.html"
+            },
+            {
+                nome: "Ella Higurashi", 
+                generos: ["gameplay", "just-chatting"], 
+                horario: "noite", 
+                tamanho: "muito pequeno", 
+                frequencia: "fim de semana", 
+                plataforma: ["twitch"], 
+                imagem: "../assets/Ella.png",
+                link: "../vtubers/EllaHigurashi.html"
+            },
+            {
+                nome: "Miya Tsuki", 
+                generos: ["gameplay", "just-chatting"], 
+                horario: ["tarde", "noite"], 
+                tamanho: "pequeno", 
+                frequencia: "dias alternados", 
+                plataforma: ["twitch"], 
+                imagem: "../assets/miya.png",
+                link: "../vtubers/MiyaTsuki.html"
+            },
+            {
+                nome: "Kensei Tokonami", 
+                generos: ["gameplay"], 
+                horario: "noite", 
+                tamanho: "muito pequeno", 
+                frequencia: "semana", 
+                plataforma: ["twitch", "youtube"],
+                imagem: "../assets/KenseiTokonami.png",
+                link: "../vtubers/KenseiTokonami.html"
+            },
+            {
+                nome: "Mizuki Oshino", 
+                generos: ["gameplay", "música", "react"], 
+                horario: "tarde", 
+                tamanho: "muito pequeno", 
+                frequencia: "dias alternados", 
+                plataforma: "youtube",
+                imagem: "../assets/Mizuki.png",
+                link: "../vtubers/mizukiOshino.html"
+            },
+            {
+                nome: "Inanacake", 
+                generos: ["just-chatting", "gameplay", "ASMR", "react"], 
+                horario: "manhã", 
+                tamanho: "médio", 
+                frequencia: "semana", 
+                plataforma: "twitch",
+                imagem: "../assets/inana.png",
+                link: "https://www.twitch.tv/inanacake"
+            },
+            {
+                nome: "Inarishino", 
+                generos: ["gameplay", "just-chatting", "react"], 
+                horario: "tarde", 
+                tamanho: "pequeno", 
+                frequencia: "dias alternados", 
+                plataforma: "twitch",
+                imagem: "../assets/Inarishino.png",
+                link: "https://www.twitch.tv/inarishino"
+            },
+            {
+                nome: "Ajiisai", 
+                generos: ["gameplay", "just-chatting", "Karaokê", "arte"], 
+                horario: "noite", 
+                tamanho: "pequeno", 
+                frequencia: "dias alternados", 
+                plataforma: "twitch",
+                imagem: "../assets/Ajiisai.png",
+                link: "https://x.com/ajiisaimiko"
+            },
+            {
+                nome: "Kubchoo", 
+                generos: ["gameplay", "just-chatting"], 
+                horario: "noite", 
+                tamanho: "pequeno", 
+                frequencia: "todo dia", 
+                plataforma: "twitch",
+                imagem: "../assets/kubchoo.png",
+                link: "https://x.com/kubch00"
+            },
+            {
+                nome: "Monstresvt", 
+                generos: ["gameplay", "just-chatting", "leitura", "arte"], 
+                horario: ["manhã","noite"], 
+                tamanho: "pequeno", 
+                frequencia: "dias aleatórios", 
+                plataforma: "twitch",
+                imagem: "../assets/monstresvt.png",
+                link: "https://x.com/monstresvt"
+            },
+            {
+                nome: "Aikyo Himeko", 
+                generos: ["just-chatting", "gameplay"], 
+                horario: "noite", 
+                tamanho: "muito pequeno", 
+                frequencia: "todo dia", 
+                plataforma: "youtube",
+                imagem: "../assets/himeko.png",
+                link: "https://x.com/AikyoHimeko"
+            },
+            {
+                nome: "Minty", 
+                generos: ["gameplay"], 
+                horario: "tarde", 
+                tamanho: "pequeno", 
+                frequencia: "dias aleatórios", 
+                plataforma: "twitch",
+                imagem: "../assets/Minty.png",
+                link: "https://x.com/Mintyliciouz"
+            },
+            {
+                nome: "Haru", 
+                generos: ["gameplay", "arte", "just chatting"], 
+                horario: "noite", 
+                tamanho: "pequeno", 
+                frequencia: "dias alternados", 
+                plataforma: ["twitch","youtube"],
+                imagem: "../assets/haru.png",
+                link: "https://x.com/oieusouaharu"
+            },
+            {
+                nome: "bossi_wi", 
+                generos: ["gameplay", "just chatting"], 
+                horario: "noite", 
+                tamanho: "muito pequeno", 
+                frequencia: "dias alternados", 
+                plataforma: "twitch",
+                imagem: "../assets/bossi_wi.png",
+                link: "https://x.com/gyaruiscute"
+            },
+            {
+                nome: "Ray Chatte", 
+                generos: ["gameplay", "just chatting", "arte"], 
+                horario: ["tarde","noite"], 
+                tamanho: "muito pequeno", 
+                frequencia: "dias alternados", 
+                plataforma: ["youtube","twitch"],
+                imagem: "../assets/RayChatte.png",
+                link: "https://linktr.ee/raychattevt"
+            },           
         ];
 
-        // Carrega as respostas do usuário
         const respostas = JSON.parse(localStorage.getItem("respostas"));
-        
+        const resultadoDiv = document.getElementById("resultado");
+
         if (!respostas) {
-            document.getElementById("resultado").innerHTML = "<p>Erro ao carregar preferências. Tente novamente.</p>";
+            resultadoDiv.innerHTML = "<p>Erro ao carregar preferências. Tente novamente.</p>";
         } else {
-            const { genero, horario, tamanho, frequencia, plataforma } = respostas;
-        
-            // Função para calcular pontuação de compatibilidade
-            function calcularPontuacao(vtuber) {
-                let pontuacao = 0;
+            const { genero, horario, frequencia, plataforma } = respostas;
 
-                if (vtuber.generos.includes(genero)) {
-                    pontuacao += vtuber.generos[0] === genero ? 3 : 2;
-                }
-
-                if (vtuber.horario === horario) pontuacao += 3;
-                if (vtuber.tamanho === tamanho) pontuacao += 3;
-                if (vtuber.frequencia === frequencia) pontuacao += 2;
-                if (vtuber.plataforma === plataforma) pontuacao += 2;
-
-                const horariosSemelhantes = {
-                    "manha": ["tarde"],
-                    "tarde": ["manha", "noite"],
-                    "noite": ["tarde", "madrugada"],
-                    "madrugada": ["noite"]
-                };
-                if (horariosSemelhantes[horario]?.includes(vtuber.horario)) pontuacao += 2;
-
-                return pontuacao;
+            function atendeCriterios(vtuber) {
+                return (
+                    vtuber.generos.includes(genero) &&
+                    (Array.isArray(vtuber.horario) ? vtuber.horario.includes(horario) : vtuber.horario === horario) &&
+                    vtuber.frequencia === frequencia &&
+                    (Array.isArray(vtuber.plataforma) ? vtuber.plataforma.includes(plataforma) : vtuber.plataforma === plataforma)
+                );
             }
-        
-            // Ordena os VTubers pela pontuação
-            const recomendadas = vtubers.map(vtuber => ({
-                ...vtuber,
-                pontuacao: calcularPontuacao(vtuber)
-            })).sort((a, b) => b.pontuacao - a.pontuacao);
-        
-            // Exibe os resultados na tela
-            const resultadoDiv = document.getElementById("resultado");
-        
-            if (recomendadas[0].pontuacao > 0) {
-                recomendadas.forEach(vtuber => {
+
+            const vtubersFiltradas = vtubers.filter(atendeCriterios);
+
+            if (vtubersFiltradas.length === 0) {
+                resultadoDiv.innerHTML = "<p>Nenhuma VTuber encontrada com esses critérios.</p>";
+            } else {
+                vtubersFiltradas.forEach(vtuber => {
                     resultadoDiv.innerHTML += `
                         <a href="${vtuber.link}" class="vtuber-link">
                             <div class="vtuber-card">
                                 <img src="${vtuber.imagem}" alt="${vtuber.nome}">
                                 <h3>${vtuber.nome}</h3>
                                 <p>Categoria: ${vtuber.generos.join(", ")}</p>
-                                <p>Horário de Live: ${vtuber.horario}</p>
+                                <p>Horário de Live: ${Array.isArray(vtuber.horario) ? vtuber.horario.join(", ") : vtuber.horario}</p>
                                 <p>Tamanho do público: ${vtuber.tamanho}</p>
                                 <p>Dias de live: ${vtuber.frequencia}</p>
-                                <p>Plataforma: ${vtuber.plataforma}</p>
-                                <p>‎‎‎‎‎‎‎‎ㅤ</p>
-                                <p><strong>Pontuação de compatibilidade: ${vtuber.pontuacao}</strong></p>
+                                <p>Plataforma: ${Array.isArray(vtuber.plataforma) ? vtuber.plataforma.join(", ") : vtuber.plataforma}</p>
                             </div>
-                        </a>
-                    `;
+                        </a>`;
                 });
-            } else {
-                resultadoDiv.innerHTML = "<p>Não encontramos VTubers compatíveis com suas preferências exatas. Tente ajustar algumas escolhas!</p>";
             }
         }
     </script>

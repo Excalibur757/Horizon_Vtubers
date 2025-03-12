@@ -78,6 +78,14 @@ h2 {
     font-weight: 600;
 }
 
+h4{
+    color: rgb(71, 143, 143);
+    padding-bottom: 20px;
+    font-size: 15px;
+    text-align: center;
+    margin: 10px 250px;
+}
+
 /* Container de resultado */
 #resultado {
     display: flex;
@@ -151,5 +159,14 @@ footer {
 
     .vtuber-card img {
         height: auto; /* Permite que a imagem se ajuste melhor em telas menores */
+    }
+
+    h2 {
+        font-size: 25px;
+        padding-top: 40px;
+    }
+
+    h4 {
+        margin: 10px 0px;
     }
 }

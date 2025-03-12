@@ -189,6 +189,10 @@ footer {
         width: 80%;
         height: auto;
     }
+
+    .novos-vtubers h2 {
+        padding-bottom: 500px;
+    }
 }
 
 /* Ajustes para telas menores que 768px (tablets e celulares grandes) */
@@ -208,6 +212,10 @@ footer {
 
     .novos-vtubers img {
         width: 70%;
+    }
+
+    .novos-vtubers h2 {
+        padding-bottom: 250px;
     }
 
     .btn {
@@ -237,6 +245,10 @@ footer {
 
     .novos-vtubers img {
         width: 90%;
+    }
+
+    .novos-vtubers h2 {
+        padding-bottom: 180px;
     }
 
     .btn {

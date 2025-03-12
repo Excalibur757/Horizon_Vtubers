@@ -1,0 +1,156 @@
+/* Estilo para a página da Carolita */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f4ff; /* Lilás claro */
+    color: #4a4a4a;
+    text-align: center;
+}
+
+header {
+    background-color: #d1b3ff; /* Roxo claro */
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a96cfd; /* Roxo intenso */
+}
+
+main {
+    padding: 40px 10%;
+}
+
+h1 {
+    color: #c79fff; /* Lilás vibrante */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #b07fff; /* Roxo médio */
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.introducao .carolita-image img {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 10px;
+}
+
+main ul li {
+    background-color: #e3c6ff; /* Lavanda clara */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+}
+
+.twitter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #d1b3ff;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        padding: 30px 5%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .introduction .carolita-image img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    main ul li {
+        font-size: 14px;
+    }
+
+    .introduction .carolita-image img {
+        width: 180px;
+    }
+}

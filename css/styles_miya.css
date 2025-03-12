@@ -1,0 +1,200 @@
+/* Estilos exclusivos para a página da Miya Tsuki */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /*background: linear-gradient(to bottom, #fbe4ef, #ffeaf4);*/
+    background-image: url("../assets/Miya_fundo4.jpg");
+
+    color: #4a2c3a;
+    text-align: center;
+}
+
+header {
+    background: #f8bfd1;
+    padding: 20px;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+nav ul li a:hover {
+    background: #e78aaa;
+    transform: scale(1.05);
+}
+
+main {
+    padding: 40px 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #d65a86;
+    font-size: 2.8em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #ba4874;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.introducao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.introducao .miya-image img {
+    width: 225px;
+    height: auto;
+    border-radius: 25%;
+    border: 4px solid #f8bfd1;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.introducao .text-content {
+    max-width: 500px;
+    text-align: left;
+    padding: 50px;
+}
+
+section {
+    background: #fff;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    width: 75%;
+}
+
+.content-list ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 15px;
+    gap: 10px; /* Adiciona mais espaçamento entre os itens */
+}
+
+.content-list ul li {
+    background: #f7b1c5;
+    margin: 1px 0; /* Aumentado para dar mais espaço entre os itens */
+    padding: 14px; /* Um pouco mais de padding para mais respiro */
+    border-radius: 6px;
+    display: inline-block;
+    width: 100%;
+    font-size: 1.1em;
+}
+
+.horarios ul, .contato ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1px;
+}
+
+.horarios ul li, .contato ul li {
+    margin: 16px 0; /* Aumentado para mais espaçamento entre os itens */
+    padding: 1px;
+}
+
+.twitter-tweet{
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: #f8bfd1;
+    color: white;
+    padding: 18px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        padding: 30px 5%;
+    }
+
+    h1 {
+        font-size: 2.3em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .introducao {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .introducao .miya-image img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin-top: 15px;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .content-list ul li {
+        font-size: 0.9em;
+    }
+
+    .introducao .miya-image img {
+        width: 225px;
+    }
+
+    .frame {
+        width: 80%;
+        padding: 10px;
+    }
+
+}

@@ -1,0 +1,143 @@
+/* Estilo para a página da Sagirimono */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1e2e;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0f1624;
+    padding: 15px;
+}
+
+nav ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li {
+    list-style: none; /* Remover o marcador da lista */
+    background-color: transparent; /* Garantir que não tenha fundo */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: aquamarine;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(24, 124, 128); /* Roxo intenso */
+}
+
+h1 {
+    color: #67d4ff;
+    font-size: 35px;
+}
+
+h2 {
+    color: #a3e7ff;
+    border-bottom: 2px solid #67d4ff;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+section {
+    background-color: #222840;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.introducao h2 {
+    color: #3b71db;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #32415e;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 60%;
+    text-align: center;
+    color: #a3e7ff;
+}
+
+a{
+    color: aqua;
+}
+
+p{
+    color: rgb(63, 165, 196);
+}
+
+img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(103, 212, 255, 0.3);
+    margin-top: 10px;
+    position: relative;
+}
+
+.frame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #0f1624;
+    color: #67d4ff;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    ul li {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    ul li {
+        font-size: 14px;
+    }
+}

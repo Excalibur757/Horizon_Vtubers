@@ -6,10 +6,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
     color: white;
     text-align: center;
-    overflow-x: hidden; /* Impede a rolagem horizontal */
+    overflow-x: hidden;
 }
 
 .container {
@@ -19,33 +18,35 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     width: 80%;
     margin: auto;
+    background: linear-gradient(to right,  #ce475d, #ff3385);
 }
 
 /* Cabeçalho */
 header {
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    padding: 20px 20px; /* Reduzi o padding para evitar excesso de espaço */
+    background: linear-gradient(to right, #ff3385, #ff3385);
+    padding: 20px 20px;
     width: 100%;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-sizing: border-box; /* Garante que o padding não cause overflow */
-    overflow: hidden; /* Impede a barra de rolagem */
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 /* Logo */
 header .logo {
-    max-height: 75px; /* Ajustei o tamanho da logo para evitar que ela ocupe muito espaço */
-    margin-right: 15px; /* Menor margem entre a logo e o título */
+    max-height: 75px;
+    margin-right: 15px;
 }
 
 /* Título do cabeçalho */
 header h1 {
-    font-size: 40px; /* Diminuí o tamanho da fonte para o título */
+    font-size: 40px;
     font-weight: 600;
     color: white;
     margin: 0;
+    font-family:Cambria, 'Cochin', Georgia, Times, Times New Roman, serif;
 }
 
 /* Menu de navegação */
@@ -66,14 +67,13 @@ nav ul li a {
     font-weight: bold;
 }
 
-
 h1 {
-    color: #60A5FA; /* Azul claro para destaque */
+    color: #ffb6c1;
 }
 
 h2 {
-    color: #93C5FD; /* Azul intermediário */
-    border-bottom: 2px solid #60A5FA;
+    color: #ffccd5;
+    border-bottom: 2px solid #ffb6c1;
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 15px;
@@ -99,8 +99,8 @@ select, button {
 }
 
 button {
-    background: #ffcc00;
-    color: black;
+    background: #ff66a3;
+    color: white;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
@@ -108,7 +108,7 @@ button {
 }
 
 button:hover {
-    background: #ffdd44;
+    background: #ff85b6;
 }
 
 /* Estilização dos cards de VTubers */
@@ -129,7 +129,7 @@ button:hover {
 }
 
 footer {
-    background-color: linear-gradient(to right, #6a11cb, #2575fc);
+    background: linear-gradient(to right, #ff3385, #ff3385);
     color: white;
     padding: 15px;
     margin-top: 20px;

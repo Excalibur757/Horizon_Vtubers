@@ -1,0 +1,130 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #0d0d0d;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #c8a23b;
+}
+
+header h1 {
+    color: #c8a23b;
+    font-size: 28px;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #c8a23b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #f4f4f4;
+}
+
+/* Seções principais */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #262626;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(200, 162, 59, 0.5);
+}
+
+h2 {
+    color: #c8a23b;
+    text-align: center;
+}
+
+/* Imagem e conteúdo */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content img {
+    width: 250px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    max-width: 600px;
+}
+
+/* Lista de conteúdos */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 18px;
+    padding: 8px 0;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+
+p{
+    text-align: center;
+}
+
+/* Redes sociais */
+.redes ul {
+    display: flex;
+    justify-content: center;
+}
+
+.redes ul li {
+    margin: 0 10px;
+}
+
+.redes ul li a {
+    text-decoration: none;
+    color: #c8a23b;
+    font-weight: bold;
+}
+
+.redes ul li a:hover {
+    color: #f4f4f4;
+}
+
+.twitter-tweet{
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0d0d0d;
+    border-top: 4px solid #c8a23b;
+    font-size: 14px;
+}
