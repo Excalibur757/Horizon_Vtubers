@@ -145,7 +145,7 @@ footer {
     text-align: center;
     padding: 15px;
     width: 100%;
-    margin-top: auto; /* Mantém o rodapé na parte inferior */
+    margin-top: 20px; 
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -178,6 +178,10 @@ footer {
         display: block;
         cursor: pointer;
     }
+
+    footer {
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -195,6 +199,10 @@ footer {
         width: 100%;
         text-align: center;
     }
+
+    footer {
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -202,10 +210,10 @@ footer {
         padding: 0 10px;
     }
     .container h2 {
-        margin-top: 20px;
+        margin-top: 170px;
     }
     .container h4 {
-        color: #50fa7b;
+        color: #cef523;
         font-size: 15px;
         text-align: center;
         white-space: normal; /* Permite que o texto quebre em múltiplas linhas */
@@ -215,11 +223,48 @@ footer {
         margin: 0 auto; /* Centraliza o texto */
     }
 
-    .header {
-        font-size: 14px;
+    header {
+        width: 100%;
+        text-align: center;
+        position:absolute;
+        background: #1a1a2e;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none; /* Remove os marcadores da lista */
+    }
+
+    nav ul li {
+        width: 100%; /* Ocupa toda a largura disponível */
+        margin: 5px 0; /* Adiciona espaçamento entre os itens */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        width: 90%; /* Evita que os links fiquem muito largos */
+        max-width: 250px; /* Define um tamanho máximo para não ficarem exagerados */
+        background-color: #333; /* Cor de fundo opcional */
+        color: white; /* Cor do texto */
+        text-decoration: none;
+        border-radius: 5px; /* Bordas arredondadas */
+    }
+
+    nav ul li a:hover {
+        background-color: #444; /* Efeito ao passar o mouse */
     }
 
     .vtuber-card {
         font-size: 12px;
+    }
+
+    footer {
+        margin-top: 20px;
     }
 }
