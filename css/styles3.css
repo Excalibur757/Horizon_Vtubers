@@ -150,23 +150,76 @@ footer {
 }
 
 
-/* Mantendo a responsividade */
-@media (max-width: 768px) {
-    .vtuber-card {
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .vtuber-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        left: 0;
         width: 100%;
-        height: auto;
     }
 
-    .vtuber-card img {
-        height: auto; /* Permite que a imagem se ajuste melhor em telas menores */
+    .menu.active {
+        display: flex;
     }
 
-    h2 {
-        font-size: 25px;
-        padding-top: 40px;
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 768px) {
+    .vtuber-list {
+        grid-template-columns: 1fr;
     }
 
-    h4 {
-        margin: 10px 0px;
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    .container h2 {
+        margin-top: 20px;
+    }
+    .container h4 {
+        color: #50fa7b;
+        font-size: 15px;
+        text-align: center;
+        white-space: normal; /* Permite que o texto quebre em múltiplas linhas */
+        word-wrap: break-word; /* Quebra palavras longas corretamente */
+        overflow-wrap: break-word; /* Adaptação extra para compatibilidade */
+        max-width: 100%; /* Garante que o h4 não ultrapasse a largura da tela */
+        margin: 0 auto; /* Centraliza o texto */
+    }
+
+    .header {
+        font-size: 14px;
+    }
+
+    .vtuber-card {
+        font-size: 12px;
     }
 }
