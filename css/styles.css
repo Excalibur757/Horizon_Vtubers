@@ -88,7 +88,7 @@ section h2 {
     display: flex;
     justify-content: center;
     align-items: flex-end; /* Faz com que os elementos "grudem" na borda inferior */
-    padding: 20px 0;
+    padding: 10px 0;
     position: relative;
     overflow: hidden; /* Para evitar que elementos ultrapassem os limites */
 }
@@ -99,8 +99,14 @@ section h2 {
 
 .novos-vtubers .vtuber-lista {
     display: flex;
-    gap: 10px; /* Reduzi o espaço entre os cards */
+    gap: 15px; /* Reduzi o espaço entre os cards */
     margin-top: 0;
+}
+
+.ultima-atualizacao {
+    text-align: left;
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .novos-vtubers .vtuber-card {
@@ -123,10 +129,10 @@ section h2 {
 
 .novos-vtubers img {
     width: 90%;
-    height: 90%;
-    border-radius: 10px;
+    height: 165px;
+    border-radius: 0px;
     padding: 0;
-    margin: 0;
+    margin-right: 150px;
 }
 
 /* Botões chamativos */
@@ -191,7 +197,12 @@ footer {
     }
 
     .novos-vtubers h2 {
-        padding-bottom: 500px;
+        padding-bottom: 550px;
+        font-size: 50px;
+    }
+
+    .ultima-atualizacao{
+        font-size: 15px;
     }
 }
 
@@ -215,7 +226,8 @@ footer {
     }
 
     .novos-vtubers h2 {
-        padding-bottom: 250px;
+        padding-bottom: 400px;
+        font-size: 40px;
     }
 
     .btn {
@@ -244,11 +256,12 @@ footer {
     }
 
     .novos-vtubers img {
-        width: 90%;
+        width: 80%;
     }
 
     .novos-vtubers h2 {
-        padding-bottom: 180px;
+        padding-bottom: 200px;
+        font-size: 28px;
     }
 
     .btn {
