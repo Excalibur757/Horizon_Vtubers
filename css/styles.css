@@ -83,6 +83,23 @@ section h2 {
     margin-bottom: 15px;
 }
 
+.aviso-desculpa {
+    background-color: #fff0f5;
+    border-left: 6px solid #ff3385;
+    padding: 20px;
+    margin: 40px auto;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+    border-radius: 12px;
+}
+.aviso-desculpa h2 {
+    color: #ff3385;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
 /* Área de novos VTubers */
 .novos-vtubers {
     display: flex;
