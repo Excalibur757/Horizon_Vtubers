@@ -1,53 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizon Vtubers</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Horizon Vtubers</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-    <header>
-        <img src="assets/logo.png" alt="Logo Horizon Vtubers" class="logo">
-        <h1>Bem-vindo ao Horizon Vtubers!</h1>
-        <nav>
-            <ul>
-                <li><a href="/telas/questionario.html">Descubra seu VTuber</a></li>
-                <li><a href="/telas/vtubers.html">Estante de Vtubers</a></li>
-                <li><a href="/telas/yutsu.html">Criador</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <p class="ultima-atualizacao">Última atualização: 23/04/2025</p>
+  <header>
+    <img src="assets/logo.png" alt="Logo Horizon Vtubers" class="logo" />
+    <h1>Bem-vindo ao Horizon Vtubers!</h1>
+    <nav>
+      <ul>
+        <li><a href="/telas/questionario.html">Descubra seu VTuber</a></li>
+        <li><a href="/telas/vtubers.html">Estante de Vtubers</a></li>
+        <li><a href="/telas/yutsu.html">Criador</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Faixa de destaque -->
+  <div class="faixa-destaque">
+    💖 Horizon Vtubers ainda está vivo e de pé! Obrigado por continuar com a gente!
+  </div>
+
+  <!-- Texto com efeito de digitação -->
+  <div class="typing-banner">
+    ✨ Estou trabalhando em novas atualizações! Novidades em breve! ✨
+  </div>
+
+  <main>
         <!-- Novos VTubers adicionados -->
         <section class="novos-vtubers">
-            <h2>Novos VTubers Adicionados!</h2>
+            <h2>Vitrine de VTubers!</h2>
             <div class="vtuber-lista">
-                <a href="https://www.youtube.com/@MiukyMeiryn">
-                    <img src="/assets/MiukyMeiryn.png" alt="Sayuri">
+                <a href="/vtubers/MiyaTsuki.html">
+                    <img src="/assets/miya.png" alt="MiyaTsuki">
                 </a>
-                <a href="https://linktr.ee/raychattevt">
-                    <img src="/assets/RayChatte.png" alt="Mary">
+                <a href="https://www.twitch.tv/baionvt">
+                    <img src="/assets/Baion.png" alt="Baion">
                 </a>
-                <a href="https://www.twitch.tv/jennytsukino">
-                    <img src="/assets/Jenny.png" alt="Belaryn">
+                <a href="/vtubers/niikkio.html">
+                    <img src="/assets/Niikkio.png" alt="Niikkio">
                 </a>
-                <a href="https://x.com/oieusouaharu">
-                    <img src="/assets/haru.png" alt="Sayuri">
+                <a href="https://www.twitch.tv/inanacake">
+                    <img src="/assets/inana.png" alt="inanacake">
                 </a>
             </div>
         </section>
 
         <section class="aviso-desculpa">
-            <h2>Um recadinho do Yutsu 💌</h2>
-            <p>O site Horizon Vtubers nasceu para ajudar a divulgar criadores incríveis, e continuo com esse objetivo no coração. Porém, nos últimos tempos, a vida ficou um pouco corrida com a faculdade e projetos pessoais acumulando.</p>
-            <p>Mesmo com a ajuda preciosa do meu amigo <strong>fantasminha</strong>, não estou conseguindo adicionar novas VTubers com a frequência que gostaria. Por isso, peço desculpas se você está esperando sua vez ou sentiu a ausência de atualizações.</p>
-            <p>Prometo que assim que possível, volto com tudo! Muito obrigado pela paciência e apoio 💖</p>
-        </section>        
+            <h2>Um avisinho do Yutsu 💌</h2>
+            <p>Depois de um tempo apertado por conta da faculdade e projetos pessoais, finalmente consegui um respiro na agenda e vou voltar a me dedicar ao Horizon com mais carinho!</p>
+            <p>Talvez as atualizações não venham com a mesma frequência de antes, mas quero que saibam: <strong>o projeto continua vivo</strong> e novos VTubers ainda serão adicionados, sim!</p>
+            <p>Obrigado de coração por ainda estarem aqui. Espero que continuem gostando desse espaço feito com muito amor pra toda comunidade VTuber 💖</p>
+        </section>
 
-        <!-- Sobre o site -->
         <section class="sobre-site">
             <h2>Sobre o site</h2>
             <p>Horizon Vtubers tem como finalidade divulgar VTubers incríveis! Ajudar a comunidade a crescer, proporcionando um espaço onde você pode conhecer novos talentos e até encontrar aquele VTuber que mais combina com você.</p>
@@ -80,16 +89,33 @@
             <p>Este site foi criado por <strong>Yutsu</strong>, um PngTuber que deseja ajudar pequenos criadores a serem descobertos.</p>
             <a href="/telas/yutsu.html" class="btn">Saiba mais</a>
         </section>
+    <p class="ultima-atualizacao">Última atualização: 09/07/2025</p>
 
     </main>
-
     <footer>
-        <p>&copy; 2025 Divulgação de VTubers. Todos os direitos reservados.</p>
-    </footer>
-    <script>
-        window.EMAILJS_PUBLIC_KEY = "756kzVslIZxmNVGQK";
-        window.EMAILJS_SERVICE_ID = "service_iacnfhk";
-        window.EMAILJS_TEMPLATE_ID = "template_x17a8ig";
-    </script>   
+    <p>&copy; 2025 Divulgação de VTubers. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Animação de scroll reveal -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const options = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      });
+    }, options);
+
+    sections.forEach(section => {
+      section.classList.add("hidden");
+      observer.observe(section);
+    });
+  </script>
+
 </body>
 </html>
